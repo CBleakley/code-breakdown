@@ -14,10 +14,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "code-breakdown.helloWorld",
-        "title": "Hello World"
+        "command": "codeBreakdown.run",
+        "title": "Code breakdown"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeBreakdown.run",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
