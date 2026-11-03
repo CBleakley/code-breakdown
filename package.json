@@ -16,6 +16,16 @@
       {
         "command": "codeBreakdown.run",
         "title": "Code breakdown"
+      },
+      {
+        "command": "codeBreakdown.setApiKey",
+        "title": "Set API key",
+        "category": "Code Breakdown"
+      },
+      {
+        "command": "codeBreakdown.clearApiKey",
+        "title": "Clear API key",
+        "category": "Code Breakdown"
       }
     ],
     "menus": {
