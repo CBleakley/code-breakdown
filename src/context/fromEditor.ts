@@ -4,8 +4,6 @@ import type { ContextResult } from "./types";
 
 /**
  * Builds the breakdown context from the editor's primary selection.
- * Extra cursors are ignored. `lineAt().text` excludes line endings, so CRLF
- * files produce `\n`-joined output.
  */
 export function contextFromEditor(editor: vscode.TextEditor): ContextResult {
   const { document, selection } = editor;

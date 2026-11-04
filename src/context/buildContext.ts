@@ -1,6 +1,5 @@
 import type { ContextErrorKind, ContextResult } from "./types";
 
-/** 0-based, as in the VS Code API. */
 export interface Position {
   line: number;
   character: number;
@@ -10,7 +9,6 @@ export interface BuildContextInput {
   languageId: string;
   selection: { start: Position; end: Position };
   lineCount: number;
-  /** 0-based; returns the line without its line ending. */
   getLine: (line: number) => string;
 }
 
@@ -42,7 +40,6 @@ export function buildContext(input: BuildContextInput): ContextResult {
     return failure("unsupported_language", UNSUPPORTED_LANGUAGE_MESSAGE);
   }
 
-  // An empty selection is a bare cursor; expanding it would pick up its line.
   if (start.line === end.line && start.character === end.character) {
     return failure("empty_selection", EMPTY_SELECTION_MESSAGE);
   }

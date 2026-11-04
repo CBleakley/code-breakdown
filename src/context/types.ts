@@ -1,7 +1,7 @@
 export interface BreakdownContext {
-  code: string; // the selected lines, exactly as in the file, with \n line endings
-  languageId: string; // VS Code language ID, e.g. "typescriptreact"
-  startLine: number; // 1-based file line number of the first selected line
+  code: string;
+  languageId: string;
+  startLine: number;
 }
 
 export type ContextErrorKind =
